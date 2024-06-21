@@ -11,11 +11,18 @@ function Joue(ligne, colone){
          plateux[ligne][colone] = Joueur
         displayPlateux()
 
-      if(Gagne(Joueur)){
-        alert(`Le Joueur ${Joueur} est victorieux`)
-        RelancerJeux()
-        return
-      }
+        setTimeout(function(){if(Gagne(Joueur)){
+            alert(`Le Joueur ${Joueur} est victorieux`)
+            RelancerJeux()
+            return
+          }
+    },0.1)
+
+    setTimeout(function(){ if(Nul()){
+        alert("Match nul")
+         RelancerJeux()
+          return
+      }},0.1)
 
       if(Nul()){
         alert("Match nul")
@@ -73,6 +80,7 @@ function Joue(ligne, colone){
                     const cell = document.createElement('div')
                     cell.classList.add("cell")
                     cell.textContent = plateux[ligne][colone]
+                    cell.onclick = function (){Joue(ligne, colone)}
                     cell.addEventListener("clique", function(){
                         Joue(ligne, colone)
                     })
