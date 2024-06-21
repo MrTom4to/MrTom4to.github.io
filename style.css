@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#plateux{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.cell{
+    width: 30%;
+    aspect-ratio: 1/1;
+    background: #F2F2F2
+}
