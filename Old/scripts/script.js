@@ -1,6 +1,7 @@
 function affscore (scoref, nomProp) {
   let spanScore = document.querySelector(".zoneScore span")
-  let affichageScore = `${score} / ${nomProp}`
+  let affichageScore = `${scoref} / ${nomProp}`
+  spanScore.innerText = affichageScore
   console.log("Votre score est de " + scoref + " sur " + nomProp)
 }
 
