@@ -16,7 +16,7 @@ function Joue(ligne, colone){
             RelancerJeux()
             return
           }
-    },0.1)
+    },0.1) 
 
     setTimeout(function(){ if(Nul()){
         alert("Match nul")
@@ -24,14 +24,8 @@ function Joue(ligne, colone){
           return
       }},0.1)
 
-      if(Nul()){
-        alert("Match nul")
-         RelancerJeux()
-          return
-      }
-
     Joueur = (Joueur === "X") ? "O" : "X"
-
+      
     }
     else{
         alert("Vous ne pouver pas jouer ici")
